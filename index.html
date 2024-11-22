@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <!-- saved from url=(0038)https://levitnudi.github.io/deeplinky/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" onclick="showFullScreen();">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Security UI Spoofing</title>
         
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     </head>  
     <body>
 
-      <p><u>Tap anywhere on this page to enter fullscreen</u></p>
+      <p style="color:blue;"><u>Tap anywhere on this page to enter fullscreen</u></p>
         
 
       <script>
-	  
-	  document.body.addEventListener("click", function (evt) {
-      document.documentElement.requestFullscreen();
-      });
+        function showFullScreen(){
+        document.documentElement.requestFullscreen();
+        }
       </script>
-      
-    
-  
-
-</body></html>
+</body>
+</html>
