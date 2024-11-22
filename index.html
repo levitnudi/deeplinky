@@ -7,7 +7,7 @@
     </head>  
     <body onclick="showFullScreen();">
  
-      <div id="tap">Loading weapon... Tap quickly at count = 1 to claim max points</div>
+      <div id="tap" style="size:30px;"><u>Loading weapon... Tap quickly at count = 1 to claim max points</u></div>
         
 <progress value="0" max="10" id="progressBar"></progress>
 
@@ -20,7 +20,7 @@ var downloadTimer = setInterval(function(){
 	tap.innerHTML = "<u>Game Over!!! (Full Screen Mode Activated)</u>";
   }
   document.getElementById("progressBar").value = 10 - timeleft;
-  tap.innerHTML = "Loading weapon... Tap quickly at count = 1 to claim max points ("+timeleft+")";
+  tap.innerHTML = "<u>Loading weapon... Tap quickly at count = 1 to claim max points ("+timeleft+")</u>";
   timeleft -= 1;
 }, 1000);
 
