@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<!-- saved from url=(0038)https://levitnudi.github.io/deeplinky/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Security UI Spoofing</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     </head>  
     <body onclick="showFullScreen();">
 
-      <p><u>Tap here to enter fullscreen</u></p>
+      <div id="tap">Loading weapon... Tap quickly at count = 1 to claim max points</div>
         
-
+<progress value="0" max="10" id="progressBar"></progress>
 
       <script>
+	  var tap = document.getElementById("tap");
+	  var timeleft = 10;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+	tap.innerHTML = "<u>Game Over!!! (Full Screen Mode Activated)</u>";
+  }
+  document.getElementById("progressBar").value = 10 - timeleft;
+  tap.innerHTML = "Loading weapon... Tap quickly at count = 1 to claim max points ("+timeleft+")";
+  timeleft -= 1;
+}, 1000);
 
         function showFullScreen(){
         document.documentElement.requestFullscreen();
         }
       </script>
       
-    </body>
-  </body>
-</html>
+    
+  
+
+</body></html>
